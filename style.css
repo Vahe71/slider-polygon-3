@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    align-items: center;
+    justify-content: center;
+    background: #111;
+    display: flex;
+}
+.slide {
+    width: 600px;
+    height: 600px;
+    margin-top: 80px;
+    overflow: hidden;
+}
+.slide .item {
+    height: 100%;
+    animation: item 30s 1s linear infinite;
+}
+@keyframes item {
+    0% {
+        clip-path: polygon(50% 0%, 50% 100%, 50% 100%);
+        background: url(images/one.jpg) no-repeat center / cover;
+    }
+    10% {
+        clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        background: url(images/one.jpg) no-repeat center / cover;
+    }
+    20% {
+        clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        background: url(images/one.jpg) no-repeat center / cover;
+    }
+    30% {
+        clip-path: polygon(100% 0, 0 0, 100% 100%);
+        background: url(images/one.jpg) no-repeat center / cover;
+    }
+    40% {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%);
+        background: url(images/one.jpg) no-repeat center / cover;
+    }
+    45% {
+        clip-path: circle(0% at 50% 50%);
+        background: url(images/two.jpg) no-repeat center / cover;
+    }
+    50% {
+        background: url(images/two.jpg) no-repeat center / cover;
+        clip-path: circle(70.7% at 50% 50%);
+    }
+    70% {
+        clip-path: circle(0% at 50% 50%);
+        background: url(images/two.jpg) no-repeat center / cover;
+        margin: 0;
+    }
+    75% {
+        clip-path: polygon(0 0, 0 50%, 0 100%, 0% 100%, 0 50%, 0% 0%);
+        background: url(images/three.jpg) no-repeat center / cover;
+    }
+    80% {
+        clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+        background: url(images/three.jpg) no-repeat center / cover;
+    }
+    90% {
+        background: url(images/three.jpg) no-repeat center / cover;
+    }
+    100% {   
+        clip-path: polygon(100% 0, 100% 50%, 100% 100%, 100% 100%, 100% 50%, 100% 0);
+        background: url(images/three.jpg) no-repeat center / cover;
+    }
+}
